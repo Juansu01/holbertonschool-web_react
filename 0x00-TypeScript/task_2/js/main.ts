@@ -29,13 +29,13 @@ class Director implements DirectorInterface {
 
 class Teacher implements TeacherInterface {
   workFromHome(): string {
-    return "Cannot work from home";
+    return "Cannot work from home"
   }
   getCoffeeBreak(): string {
-    return "Cannot have a break";
+    return "Cannot have a break"
   }
   workTeacherTasks(): string {
-    return "Getting to work";
+    return "Getting to work"
   }
 }
 
@@ -47,6 +47,41 @@ const createEmployee = (salary: number | string): Teacher | Director => {
   return new Director();
 }
 
-console.log(createEmployee(200));
-console.log(createEmployee(1000));
-console.log(createEmployee("$500"));
+console.log(createEmployee(200))
+console.log(createEmployee(1000))
+console.log(createEmployee("$500"))
+
+function isDirector(employee: TeacherInterface | DirectorInterface): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
+
+  if (isDirector(employee)) {
+    console.log(employee.workDirectorTasks())
+    return employee.workDirectorTasks()
+
+  } else {
+    console.log(employee.workTeacherTasks())
+    return employee.workTeacherTasks()
+
+  }
+}
+
+executeWork(createEmployee(200))
+executeWork(createEmployee(1000))
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass:Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
+  }
+}
+
+
+console.log(teachClass("Math"))
+
+console.log(teachClass("History"))
