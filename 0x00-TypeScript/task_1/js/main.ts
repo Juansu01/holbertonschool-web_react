@@ -46,3 +46,14 @@ console.log(director1);
 // lastName: "Doe"
 // location: "London"
 // numberOfReports: 17
+
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = function (firstName: string, lastName: string):
+  string { return `${firstName.charAt(0)}. ${lastName}`}
+
+console.log(printTeacher("John", "Doe"))
+
+// printTeacher("John", "Doe") -> J. Doe
