@@ -1,45 +1,25 @@
-interface Student {
-    firstName: string;
-    lastName: string;
-    age: number;
-    location: string;
+interface MajorCredits {
+  credit: number
+  _brand: "Major"
 }
 
-const student1: Student = {
-    firstName: "Jennie",
-    lastName: "Kim",
-    age: 26,
-    location: "Seoul",
+interface MinorCredits {
+  credit: number
+  _brand: "Minor"
 }
 
-const student2: Student = {
-    firstName: "Lalisa",
-    lastName: "Manobal",
-    age: 25,
-    location: "Seoul",
+function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits
+): MajorCredits {
+  const sum = subject1.credit + subject2.credit
+  const obj: MajorCredits = {credit: sum, _brand: "Major"}
+
+  return obj
 }
 
-const studentsList: Array<Student> = [student1, student2]
-const body: HTMLBodyElement = document.getElementsByTagName("body")[0]
-const table: HTMLTableElement = document.createElement("table")
-const thead: HTMLTableSectionElement = document.createElement("thead")
-const tbody: HTMLTableSectionElement = document.createElement("tbody")
-const rowHead: HTMLTableRowElement = thead.insertRow(0)
-const cell1Head: HTMLTableCellElement = rowHead.insertCell(0)
-cell1Head.innerHTML = "firstName"
-const cell2Head: HTMLTableCellElement = rowHead.insertCell(1)
-cell2Head.innerHTML = "location"
+function sumMinorCredits(subject1: MinorCredits, subject2: MinorCredits
+): MinorCredits {
+  const sum = subject1.credit + subject2.credit
+  const obj: MinorCredits = {credit: sum, _brand: "Minor"}
 
-table.append(thead)
-
-studentsList.forEach((student) => {
-    const row: HTMLTableRowElement = tbody.insertRow(0)
-    const firstCell: HTMLTableCellElement = row.insertCell(0)
-    const secondCell: HTMLTableCellElement = row.insertCell(1);
-
-    firstCell.innerHTML = student.firstName
-    secondCell.innerHTML = student.location
-})
-
-table.append(tbody)
-body.append(table)
+  return obj
+}
