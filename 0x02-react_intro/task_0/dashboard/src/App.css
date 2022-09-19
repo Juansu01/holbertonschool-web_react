@@ -1,0 +1,29 @@
+:root {
+  --red-color: #e01d3f;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  color: var(--red-color);
+  font-size: 20px;
+  border-bottom: 3px solid var(--red-color);
+}
+
+.App-body {
+  margin-left: 50px;
+}
+
+.App-footer {
+  margin-top: auto;
+  border-top: 3px solid var(--red-color);
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+}
