@@ -1,6 +1,6 @@
 import React from "react";
-import closeIcon from "./close-icon.png";
-import { getLatestNotification } from "./utils";
+import closeIcon from "../assets/close-icon.png";
+import { getLatestNotification } from "../utils/utils";
 import "./Notifications.css";
 
 const buttonStyle = {

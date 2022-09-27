@@ -1,34 +1,13 @@
 :root {
-  --red-color: #e01d3f;
-}
-
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.App-body input {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.App-header {
-  display: flex;
-  align-items: center;
-  color: var(--red-color);
-  font-size: 20px;
-  border-bottom: 3px solid var(--red-color);
-}
-
-.App-body {
-  margin-left: 50px;
+  --main-color: #e01d3f;
 }
 
 .App-footer {
-  margin-top: auto;
-  border-top: 3px solid var(--red-color);
+  border-top: 3px solid var(--main-color);
+  width: 100%;
   display: flex;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
   font-style: italic;
 }

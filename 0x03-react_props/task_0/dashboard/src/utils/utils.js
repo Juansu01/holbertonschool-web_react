@@ -1,4 +1,3 @@
-
 export function getFullYear() {
     const fullYear = new Date().getFullYear();
 
