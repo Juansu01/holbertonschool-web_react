@@ -1,0 +1,12 @@
+:root {
+  --main-color: #e01d3f;
+}
+
+.App-login {
+  margin: 50px;
+}
+
+.App-login input {
+  margin-left: 15px;
+  margin-right: 15px;
+}
