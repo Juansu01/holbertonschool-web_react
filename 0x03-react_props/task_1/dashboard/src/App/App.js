@@ -15,9 +15,7 @@ function App() {
       <div className="App-body">
         <Login />
       </div>
-      <div className="App-footer">
         <Footer />
-      </div>
   </>
   );
 }

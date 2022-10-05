@@ -10,7 +10,7 @@ describe("<Footer />", () => {
   it("Ensures that footer has 'Copyright' string", () => {
     const wrapper = shallow(<Footer />);
     wrapper.update();
-    expect(wrapper.find("div.footer p")).toHaveLength(1);
-    expect(wrapper.find("div.footer p").text()).toContain("Copyright");
+    expect(wrapper.find("div.App-footer p")).toHaveLength(1);
+    expect(wrapper.find("div.App-footer p").text()).toContain("Copyright");
   });
 });

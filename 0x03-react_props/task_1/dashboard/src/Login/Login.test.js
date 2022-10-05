@@ -10,11 +10,11 @@ describe("<Login />", () => {
   it("Component renders two inputs", () => {
     const wrapper = shallow(<Login />);
     wrapper.update();
-    expect(wrapper.find("div.login input")).toHaveLength(2);
+    expect(wrapper.find("div.App-login input")).toHaveLength(2);
   });
   it("Component renders two labels", () => {
     const wrapper = shallow(<Login />);
     wrapper.update();
-    expect(wrapper.find("div.login label")).toHaveLength(2);
+    expect(wrapper.find("div.App-login label")).toHaveLength(2);
   });
 });
