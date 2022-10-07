@@ -8,7 +8,7 @@ describe("Testing CourseList component", () => {
     expect(wrapper.exists()).toEqual(true)
   })
   it("it renders the 5 different rows", () => {
-    const wrapper = shallow(<CourseList />)
+    const wrapper = shallow(<CourseList isHeader={true} textFirstCell="test" />)
     wrapper.update()
     const item = wrapper.find("CourseListRow")
 

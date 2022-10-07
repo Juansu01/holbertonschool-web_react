@@ -3,21 +3,29 @@ import PropTypes from "prop-types"
 
 function CourseListRow({isHeader, textFirstCell, textSecondCell}) {
 
-    let component
+     let element;
 
-    if (isHeader) {
-
-        if (textSecondCell === null) {
-            component = <th colSpan="2">{textFirstCell}</th>
-        } else {
-            component = (<><td>{textFirstCell}</td><td>{textSecondCell}</td></>)
-        }
-
-    } else if (isHeader === false) {
-        element = (<><td>{textFirstCell}</td><td>{textSecondCell}</td></>)
+  if (isHeader === true) {
+    if (textSecondCell === null) {
+      element = <th colSpan="2">{textFirstCell}</th>;
+    } else {
+      element = (
+        <>
+          <th>{textFirstCell}</th>
+          <th>{textSecondCell}</th>
+        </>
+      );
     }
+  } else if (isHeader === false) {
+    element = (
+      <>
+        <td>{textFirstCell}</td>
+        <td>{textSecondCell}</td>
+      </>
+    );
+  }
 
-    return (<tr>{component}</tr>)
+  return <tr>{element}</tr>;
 }
 
 CourseListRow.defaultProps = {
