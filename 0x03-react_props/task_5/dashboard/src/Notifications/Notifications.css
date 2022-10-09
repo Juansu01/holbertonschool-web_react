@@ -1,0 +1,27 @@
+:root {
+  --red-color: #e01d3f;
+}
+
+.Notifications {
+  float: right;
+  border: 3px dashed var(--red-color);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.menuitem {
+  text-align: right;
+}
+
+.Notifications p {
+  padding-left: 5px;
+}
+
+
+[data-notification-type="default"] {
+  color: blue;
+}
+
+[data-notification-type="urgent"] {
+  color: red;
+}
