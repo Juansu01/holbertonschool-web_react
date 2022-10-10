@@ -29,7 +29,7 @@ function Notifications({displayDrawer, listNotifications}) {
           <button
             onClick={logToConsole}
             style={buttonStyle} aria-label="close">
-            <img src={closeIcon} alt="close-icon" />
+            <img src={closeIcon} alt="close-icon" width="15"/>
           </button>
           <p>Here is the list of notifications</p>
           <ul>
