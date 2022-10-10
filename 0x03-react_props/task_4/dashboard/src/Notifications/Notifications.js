@@ -27,7 +27,7 @@ function Notifications({displayDrawer}) {
         <div className="Notifications">
           <button
             style={buttonStyle} aria-label="close">
-            <img src={closeIcon} alt="close-icon" />
+            <img src={closeIcon} alt="close-icon" width="15" />
           </button>
           <p>Here is the list of notifications</p>
           <ul>
