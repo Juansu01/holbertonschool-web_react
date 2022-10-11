@@ -34,6 +34,6 @@ describe("Testing <Notifications /> component", () => {
     listItem.simulate("click")
     instance.markAsRead(testId)
     expect(instance.markAsRead).toHaveBeenCalledWith(13)
-    jest.restoreAllMocks();
+    jest.restoreAllMocks()
   })
 })

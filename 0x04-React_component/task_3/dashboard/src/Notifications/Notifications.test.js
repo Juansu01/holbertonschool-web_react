@@ -15,7 +15,7 @@ describe("<Notifications /> Test", () => {
   it("menu item is being displayed when displayDrawer is false", () => {
     const wrapper = shallow(<Notifications />)
     wrapper.update()
-    const item = wrapper.find("div.menuItem")
+    const item = wrapper.find("div.notifications-text")
     expect(item).toHaveLength(1)
   })
   it("div.Notifications is not being displayed when displayDrawer is false", () => {
@@ -27,7 +27,7 @@ describe("<Notifications /> Test", () => {
   it("menu item is being displayed when displayDrawer is true", () => {
     const wrapper = shallow(<Notifications displayDrawer />);
     wrapper.update()
-    const item = wrapper.find("div.menuItem")
+    const item = wrapper.find("div.Notifications")
     expect(item).toHaveLength(1)
   })
   it("div.Notifications is being displayed when displayDrawer is true", () => {

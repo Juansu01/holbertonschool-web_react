@@ -32,7 +32,7 @@ class Notifications extends Component {
     const { displayDrawer, listNotifications } = this.props;
   return (
     <>
-      <div className="menuItem">
+      <div className="notifications-text">
         <p>Your notifications</p>
       </div>
       {displayDrawer && (
