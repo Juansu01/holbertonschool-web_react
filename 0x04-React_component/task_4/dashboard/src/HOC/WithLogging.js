@@ -1,19 +1,19 @@
 import React from "react";
 
-function withLogging(component) {
-    const componentName = component.displayName || component.name || "Component";
+function withLogging(Component) {
+    const componentName = Component.displayName || Component.name || "Component";
 
     class HOC extends React.Component {
         componentDidMount() {
             console.log(`Component ${componentName} is mounted`)
         }
 
-        componentWillMount() {
-            console.log(`Component ${componentName} is going to mount`)
+        componentWillUnmount() {
+            console.log(`Component ${componentName} is going to unmount`)
         }
 
         render() {
-            return <WrappedComponent {...this.props} />;
+            return <Component {...this.props} />;
         }
     }
     HOC.displayName = `withLogging(${componentName})`;
