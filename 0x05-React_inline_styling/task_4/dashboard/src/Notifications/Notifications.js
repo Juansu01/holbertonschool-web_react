@@ -143,7 +143,6 @@ const styles = StyleSheet.create({
 
   notifications: {
     float: "right",
-    // border: `3px dashed ${cssVars.mainColor}`,
     padding: "10px",
     marginBottom: "20px",
     animationName: [borderKeyframes],
