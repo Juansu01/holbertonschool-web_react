@@ -50,7 +50,8 @@ class Notifications extends Component {
           <p className={css(styles.notificationsPTag)}>Here is the list of notifications</p>
           <ul className={css(styles.notificationsUL)}>
             {listNotifications.length === 0 && (
-              <NotificationItem value="No new notification for now" />
+              <NotificationItem type="noNotifications"
+              value="No new notifications for now" />
             )}
             {listNotifications.map((notification) => (
               <NotificationItem
@@ -59,7 +60,7 @@ class Notifications extends Component {
                 type={notification.type}
                 value={notification.value}
                 html={notification.html}
-                markAsRead={this.markNotificationAsRead}
+                markAsRead={markNotificationAsRead}
               />
             ))}
           </ul>

@@ -10,8 +10,8 @@ function Footer() {
           <div className="footer">
             <p>
               Copyright {getFullYear()} - {getFooterCopy(true)}
+              {context.user.isLoggedIn && <a href="#"> Contact us</a>}
             </p>
-            {context.user.isLoggedIn && <a href="#">Contact us</a>}
           </div>
         );
       }}

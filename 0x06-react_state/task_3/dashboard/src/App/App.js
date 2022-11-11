@@ -32,6 +32,7 @@ class App extends Component {
     this.handleHideDrawer = this.handleHideDrawer.bind(this);
     this.logIn = this.logIn.bind(this);
     this.logOut = this.logOut.bind(this);
+    this.markNotificationAsRead = this.markNotificationAsRead.bind(this);
     this.state = {
       displayDrawer: false,
       user,

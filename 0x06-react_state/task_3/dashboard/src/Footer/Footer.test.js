@@ -31,6 +31,6 @@ describe("<Footer />", () => {
       </AppContext.Provider>
     );
     expect(wrapper.find("div.footer a")).toHaveLength(1);
-    expect(wrapper.find("div.footer a").text()).toEqual("Contact us");
+    expect(wrapper.find("div.footer a").text()).toEqual(" Contact us");
   });
 });
